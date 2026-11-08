@@ -185,6 +185,18 @@ class StreetGeometryTests(unittest.TestCase):
         self.assertLess(fitted['size'][0]*fitted['size'][2],400)
         self.assertIsNone(fit_building(o,box(-1,-1,1,1)))
 
+    def test_every_generated_building_leaves_neighbours_and_their_trim_clear(self):
+        import json
+        data=json.loads((Path(__file__).resolve().parents[1]/'src/generated/chicago.json').read_text())
+        objects=data['world']['objects']
+        footprints=[building_footprint(o) for o in objects]
+        tree=STRtree(footprints)
+        for i,footprint in enumerate(footprints):
+            for j in tree.query(footprint,predicate='intersects'):
+                if j>i:
+                    self.assertLess(footprint.intersection(footprints[j]).area,1e-6,
+                                    objects[i]['id']+' overlaps '+objects[j]['id'])
+
     def test_landmark_ensemble_keeps_identical_size_and_relative_layout(self):
         objects=[dict(id='a',position=[0,20,0],size=[20,40,20],yaw=.3),
                  dict(id='b',position=[30,20,0],size=[20.25,40,19.75],yaw=1.2)]

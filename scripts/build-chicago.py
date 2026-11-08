@@ -160,6 +160,9 @@ def main():
             continue
         if o!=original:fitted_count+=1
         assert exposed_ground.covers(building_footprint(o)), f"Unsupported building: {o['id']}"
+        # Reserve ordinary buildings too, including trim, before fitting the next neighbour.
+        if not record['protected']:
+            building_land=building_land.difference(building_footprint(o).buffer(0.5))
         families[o['templateId']]+=1;heights[record['method']]+=1
         objects.append(o);source.append(record['source'])
     # Carry the structural slab across the lowered bank terrace and into solid ground.

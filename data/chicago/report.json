@@ -1,5 +1,5 @@
 {
-  "buildings": 698,
+  "buildings": 652,
   "protectedBuildings": [
     "osm-w1177923716",
     "osm-w284822929",
@@ -82,12 +82,12 @@
     "osm-w846471647",
     "osm-w95486960"
   ],
-  "fittedBuildings": 240,
-  "omittedBuildings": 20,
+  "fittedBuildings": 393,
+  "omittedBuildings": 66,
   "roads": 1025,
   "families": {
-    "stone": 462,
-    "glass": 226,
+    "stone": 420,
+    "glass": 222,
     "clock": 2,
     "marina": 2,
     "deco": 3,
@@ -96,9 +96,9 @@
     "rounded": 1
   },
   "heights": {
-    "osm-height": 199,
-    "estimated": 121,
-    "osm-levels": 371,
+    "osm-height": 194,
+    "estimated": 109,
+    "osm-levels": 342,
     "landmark-reference": 7
   },
   "bounds": [
