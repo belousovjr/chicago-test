@@ -1,0 +1,24 @@
+{
+  "name": "chicago-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5174 --strictPort",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.ts",
+    "test:geometry": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+    "city:build": "python3 scripts/build-chicago.py",
+    "city:fetch": "python3 scripts/fetch-chicago.py",
+    "textures:build": "python3 scripts/build-textures.py"
+  },
+  "devDependencies": {
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^9.35.0",
+    "@babylonjs/loaders": "^9.35.0"
+  }
+}

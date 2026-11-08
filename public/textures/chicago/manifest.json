@@ -1,0 +1,90 @@
+{
+  "license": "CC0-1.0",
+  "sources": [
+    {
+      "id": "Asphalt031",
+      "page": "https://ambientcg.com/view?id=Asphalt031",
+      "download": "https://ambientcg.com/get?file=Asphalt031_1K-JPG.zip",
+      "sha256": "f98114b8fb083fc65925c3b4568b131e37c9a23357d432a16e59676dbc69f964",
+      "ao": "source"
+    },
+    {
+      "id": "Concrete031",
+      "page": "https://ambientcg.com/view?id=Concrete031",
+      "download": "https://ambientcg.com/get?file=Concrete031_1K-JPG.zip",
+      "sha256": "3068e551435d3cdae3942017799d8871b940c88ebfaf5c2b87376972ae448fd6",
+      "ao": "source"
+    },
+    {
+      "id": "Bricks090",
+      "page": "https://ambientcg.com/view?id=Bricks090",
+      "download": "https://ambientcg.com/get?file=Bricks090_1K-JPG.zip",
+      "sha256": "4386aadc14eb48fc60e6ab6a4c43e658bd6f424dbc7a4cdcaea3a44c5911581c",
+      "ao": "source"
+    },
+    {
+      "id": "Metal046A",
+      "page": "https://ambientcg.com/view?id=Metal046A",
+      "download": "https://ambientcg.com/get?file=Metal046A_1K-JPG.zip",
+      "sha256": "9b6ce754393bc7dd7899ce3874576ad504d33aa380098aa2751ce1f6e4981b37",
+      "ao": "generated cavity from source height"
+    },
+    {
+      "id": "Grass004",
+      "page": "https://ambientcg.com/view?id=Grass004",
+      "download": "https://ambientcg.com/get?file=Grass004_1K-JPG.zip",
+      "sha256": "4b63495f459db8481f4d5144e4e9069345c81cf898cc71f2216f5dd3bb344469",
+      "ao": "source"
+    }
+  ],
+  "derived": [
+    "facade-stone",
+    "facade-brick",
+    "facade-glass",
+    "facade-dark",
+    "roof",
+    "rail-steel",
+    "riverbed",
+    "paint",
+    "water"
+  ],
+  "lodSizes": [
+    512,
+    128,
+    32
+  ],
+  "facadeLodSizes": [
+    1024,
+    512,
+    128
+  ],
+  "litWindowFractions": {
+    "facade-stone": [
+      0.1171875,
+      0.140625,
+      0.1484375
+    ],
+    "facade-brick": [
+      0.1171875,
+      0.140625,
+      0.1484375
+    ],
+    "facade-glass": [
+      0.1015625,
+      0.13020833333333334,
+      0.15104166666666666
+    ],
+    "facade-dark": [
+      0.1015625,
+      0.13020833333333334,
+      0.15104166666666666
+    ]
+  },
+  "maps": [
+    "albedo",
+    "ambient occlusion",
+    "OpenGL normal",
+    "specular RGB + glossiness alpha (1 - roughness)"
+  ],
+  "runtime": "LOD0 albedo+AO+normal+specular/glossiness; LOD1/2 albedo with baked AO; all levels have mipmaps"
+}

@@ -1,0 +1,8 @@
+{
+  "size": 1024,
+  "bodyBottom": -0.42,
+  "bodyTop": 0.46,
+  "marina": { "rings": 18, "bottom": -0.46, "step": 0.05 },
+  "glass": { "rows": 32, "columns": 12, "insetX": 3, "insetTop": 3, "insetBottom": 4 },
+  "masonry": { "rows": 16, "columns": 8, "insetX": 17, "insetTop": 9, "insetBottom": 10 }
+}

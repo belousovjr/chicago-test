@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#172b30" />
+    <style>
+      #startup-loader { position: fixed; inset: 0; z-index: 100; display: grid; place-content: center; gap: 18px; text-align: center; background: #172b30; color: #edf1eb; font: 16px system-ui, sans-serif; }
+      #startup-loader::before { content: ''; width: 30px; height: 30px; margin: auto; border: 3px solid #edf1eb33; border-top-color: #d4a663; border-radius: 50%; animation: loading-spin 1s linear infinite; }
+      @keyframes loading-spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { #startup-loader::before { animation: none; } }
+    </style>
+    <title>Block District — офлайн-песочница</title>
+  </head>
+  <body>
+    <div id="startup-loader" role="status" aria-live="polite">Загружаем Chicago Loop…</div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

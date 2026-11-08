@@ -1,0 +1,79 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #edf1eb; background: #bacbcc; font-synthesis: none; }
+* { box-sizing: border-box; }
+html, body, #app { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+[hidden] { display: none !important; }
+#renderCanvas { display: block; width: 100%; height: 100%; outline: none; touch-action: none; }
+header { position: absolute; top: 28px; left: 32px; right: 32px; display: flex; justify-content: space-between; align-items: center; pointer-events: none; }
+header button { pointer-events: auto; }
+.brand { display: flex; gap: 13px; align-items: center; color: #21373a; font-size: 14px; font-weight: 800; letter-spacing: 2px; }
+.mark { font-size: 30px; letter-spacing: -4px; border-right: 1px solid #21373a44; padding-right: 18px; }
+.brand small { display: block; margin-top: 4px; font-size: 9px; font-weight: 600; letter-spacing: 1.8px; opacity: .65; }
+button, select, .file-button { font: inherit; font-size: 12px; border: 1px solid #c5d3cf33; border-radius: 5px; background: #263b40; color: #eef1e9; padding: 10px 13px; cursor: pointer; }
+button:hover, .file-button:hover { background: #385157; }
+button:focus-visible, select:focus-visible, .file-button:focus-within { outline: 2px solid #efc57e; outline-offset: 3px; }
+button:disabled { opacity: .35; cursor: default; }
+header button { padding: 11px 16px; }
+kbd { font: inherit; font-size: 10px; display: inline-block; padding: 3px 5px; border: 1px solid currentColor; border-radius: 3px; opacity: .75; }
+header kbd { margin-left: 14px; }
+#intro { position: absolute; top: 112px; left: 34px; color: #263c40; pointer-events: none; }
+.eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 2px; opacity: .7; }
+h1 { font-size: clamp(21px, 2.7vw, 36px); font-weight: 500; line-height: 1.18; letter-spacing: -1.2px; margin: 12px 0; }
+#intro p { font-size: 12px; opacity: .7; }
+#editor { position: absolute; top: 90px; right: 24px; width: 310px; max-height: calc(100vh - 180px); overflow-y: auto; background: #172b30f5; border: 1px solid #ffffff18; padding: 22px; border-radius: 8px; box-shadow: 0 12px 40px #152a3020; }
+h2 { font-size: 20px; font-weight: 500; margin: 8px 0 18px; letter-spacing: -.5px; }
+.muted { color: #acbcb9; font-size: 11px; line-height: 1.6; }
+.tools { display: flex; gap: 5px; margin: 12px 0; }
+.tools button { flex: 1; padding: 9px 6px; font-size: 11px; }
+button.active { background: #d4a663; color: #172b30; }
+label { display: block; font-size: 11px; margin: 15px 0; color: #bdcbc6; }
+select { display: block; width: 100%; margin-top: 7px; }
+.check { display: flex; align-items: center; gap: 6px; }
+input[type=checkbox] { accent-color: #d4a663; }
+#selection { min-height: 70px; white-space: pre-line; overflow-wrap: anywhere; padding: 12px; background: #0a1c2066; font: 11px/1.8 ui-monospace, monospace; border-radius: 4px; }
+.danger { color: #f2ab99; }
+.quiet { background: transparent; width: 100%; font-size: 10px; }
+.file-button { position: relative; display: block; text-align: center; margin: 10px 0; }
+.file-button input { position: absolute; inset: 0; opacity: 0; width: 100%; cursor: pointer; }
+#spawn { width: 100%; font-size: 11px; }
+#notice { position: absolute; bottom: 83px; left: 32px; max-width: min(620px, calc(100vw - 64px)); padding: 9px 12px; color: #eef1e9; background: #21373ae6; border-left: 2px solid #d4a663; border-radius: 2px; font-size: 11px; pointer-events: none; }
+footer { position: absolute; bottom: 22px; left: 32px; right: 32px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 10px; color: #eef1e9; background: #172b30eb; border: 1px solid #ffffff12; border-radius: 6px; padding: 12px 16px; pointer-events: none; }
+#help { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+#help kbd { margin-right: 4px; }
+#stats { color: #b5c6c0; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 760px) { header { left: 16px; right: 16px; top: 16px; } #intro { left: 18px; top: 90px; } #editor { right: 12px; width: 280px; top: 76px; } footer { left: 12px; right: 12px; bottom: 12px; padding: 10px; } #help { gap: 8px; } #help span:nth-child(n+4) { display: none; } #stats { font-size: 9px; } #notice { left: 12px; bottom: 92px; } }
+.brand { background: #e6ece6e6; padding: 10px 14px; border-radius: 5px; }
+#intro { background: #e6ece6e6; padding: 18px 22px; border-radius: 5px; }
+#editor input:not([type=checkbox]):not([type=file]) { display: block; width: 100%; min-width: 0; margin-top: 7px; padding: 8px; background: #263b40; color: #eef1e9; border: 1px solid #c5d3cf33; border-radius: 4px; }
+#editor input[type=color] { height: 36px; padding: 3px !important; }
+#editor details { margin: 12px 0; font-size: 11px; }
+#editor summary { cursor: pointer; color: #d4a663; }
+#template-from-object, #save-template { width: 100%; font-size: 11px; }
+#attribution { position: absolute; bottom: 2px; left: 35px; font-size: 9px; color: #203a40; background: #e6ece6db; padding: 2px 6px; border-radius: 2px; }
+#editor a { color: #d4a663; }
+
+#day-time-label { float: right; color: #efc57e; font-variant-numeric: tabular-nums; }
+#editor input[type=range] { padding: 0; background: transparent; border: 0; accent-color: #d4a663; cursor: ew-resize; }
+
+/* Apply the film treatment to the complete page, including the HUD and editor. */
+body { filter: sepia(0.05); }
+body::after {
+  content: '';
+  position: fixed;
+  inset: -128px;
+  z-index: 2147483647;
+  pointer-events: none;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Cpath d='M0 0h128v128H0z' filter='url(%23grain)'/%3E%3C/svg%3E");
+  animation: film-grain 0.8s steps(1, end) infinite;
+}
+@keyframes film-grain {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-23px, -47px); }
+  50% { transform: translate(-61px, -17px); }
+  75% { transform: translate(-37px, -89px); }
+}
+@media (prefers-reduced-motion: reduce) { body::after { animation: none; } }
+
+body.no-film { filter: none; }
+body.no-film::after { display: none; }
+#performance-panel .check { margin: 8px 0; }

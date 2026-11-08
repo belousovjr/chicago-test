@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-08",
+  "viewport": [
+    1280,
+    720
+  ],
+  "browser": "Windows Chrome headless",
+  "flags": [
+    "--disable-frame-rate-limit",
+    "--disable-gpu-vsync"
+  ],
+  "samplesPerScenario": 120,
+  "warmup": "4 seconds, then wait for building LOD transitions to settle, then 1 second",
+  "allPerformanceOptionsEnabled": true,
+  "results": [
+    {
+      "cpuMean": 61.89166666665115,
+      "cpuMedian": 60.10000000055879,
+      "cpuP95": 78.3999999994412,
+      "frameMean": 63.26386554621379,
+      "draws": 537,
+      "active": 176,
+      "activeMeshEvaluation": 3.475833333345751,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "meshes": 8494,
+      "port": 5173,
+      "scenario": "day",
+      "errors": []
+    },
+    {
+      "cpuMean": 9.324999999984477,
+      "cpuMedian": 9.400000000372529,
+      "cpuP95": 11.100000000558794,
+      "frameMean": 10.074789915969516,
+      "draws": 58,
+      "active": 14,
+      "activeMeshEvaluation": 0.7616666666697711,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "meshes": 8496,
+      "port": 5174,
+      "scenario": "day",
+      "errors": []
+    },
+    {
+      "cpuMean": 20.868333333334885,
+      "cpuMedian": 20.600000000558794,
+      "cpuP95": 26.09999999962747,
+      "frameMean": 21.745378151254243,
+      "draws": 488,
+      "active": 1045,
+      "activeMeshEvaluation": 5.323333333316259,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "meshes": 8494,
+      "port": 5173,
+      "scenario": "overview",
+      "errors": []
+    },
+    {
+      "cpuMean": 7.648333333370586,
+      "cpuMedian": 7.2000000001862645,
+      "cpuP95": 11.399999999441206,
+      "frameMean": 8.503361344540945,
+      "draws": 42,
+      "active": 37,
+      "activeMeshEvaluation": 0.8716666666946064,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "meshes": 8496,
+      "port": 5174,
+      "scenario": "overview",
+      "errors": []
+    },
+    {
+      "cpuMean": 29.151666666660457,
+      "cpuMedian": 29.199999999254942,
+      "cpuP95": 35.09999999962747,
+      "frameMean": 30.15126050420168,
+      "draws": 231,
+      "active": 180,
+      "activeMeshEvaluation": 4.872500000009313,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "meshes": 8494,
+      "port": 5173,
+      "scenario": "night",
+      "errors": []
+    },
+    {
+      "cpuMean": 7.571666666640279,
+      "cpuMedian": 7.8999999994412065,
+      "cpuP95": 9.5,
+      "frameMean": 8.698319327735788,
+      "draws": 53,
+      "active": 14,
+      "activeMeshEvaluation": 0.9041666666589057,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "meshes": 8496,
+      "port": 5174,
+      "scenario": "night",
+      "errors": []
+    }
+  ]
+}
